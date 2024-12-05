@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "size": "L",
+        "fuel": "gasoline",
+        "doors": 5,
+        "transmission": "manual"
+    },
+    {
+        "id": 2,
+        "size": "M",
+        "fuel": "hybrid",
+        "doors": 3,
+        "transmission": "auto"
+    },
+    {
+        "id": 3,
+        "size": "M",
+        "fuel": "hybrid",
+        "doors": 3,
+        "transmission": "manual"
+    },
+    {
+        "id": 4,
+        "size": "XL",
+        "fuel": "electric",
+        "doors": 5,
+        "transmission": "manual"
+    },
+    {
+        "id": 5,
+        "size": "S",
+        "fuel": "gasoline",
+        "doors": 3,
+        "transmission": "auto"
+    },
+    {
+        "id": 6,
+        "size": "M",
+        "fuel": "gasoline",
+        "doors": 3,
+        "transmission": "auto"
+    },
+    {
+        "id": 7,
+        "size": "XS",
+        "fuel": "hybrid",
+        "doors": 3,
+        "transmission": "manual"
+    },
+    {
+        "id": 8,
+        "size": "XS",
+        "fuel": "hybrid",
+        "doors": 5,
+        "transmission": "auto"
+    },
+    {
+        "id": 9,
+        "size": "XL",
+        "fuel": "hybrid",
+        "doors": 3,
+        "transmission": "manual"
+    },
+    {
+        "id": 10,
+        "size": "XL",
+        "fuel": "electric",
+        "doors": 5,
+        "transmission": "manual"
+    },
+    {
+        "id": 11,
+        "size": "M",
+        "fuel": "electric",
+        "doors": 5,
+        "transmission": "auto"
+    }
+]
