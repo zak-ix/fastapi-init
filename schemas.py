@@ -1,8 +1,15 @@
 from typing import Optional
-from pydantic import BaseModel
-import json
-from sqlmodel import Field, SQLModel
-from tomlkit import table
+from sqlmodel import Field, Relationship, SQLModel
+
+
+
+class Trip(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    start: int
+    end: int
+    description: str
+    car_id: int = Field(foreign_key="car.id")
+    car: "Car" = Relationship(back_populates="trips")
 
 class Car(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -10,12 +17,13 @@ class Car(SQLModel, table=True):
     fuel: str | None = "electric"
     doors: int
     transmission: str | None = "auto"
+    trips: list[Trip] = Relationship(back_populates="car")
 
 
-def load_db() -> list[Car]:
-    with open("cars.json") as f:
-        return [Car.model_validate(obj) for obj in json.load(f)]
-    
-def save_db(cars: list[Car]):
-    with open("cars.json", "w") as f:
-        json.dump([car.model_dump() for car in cars], f, indent=4)
+class CarOutput(SQLModel):
+    id: Optional[int]
+    size: str
+    fuel: str | None = "electric"
+    doors: int
+    transmission: str | None = "auto"
+    trips: list[Trip]

@@ -1,0 +1,17 @@
+POST http://localhost:8000/cars
+
+{
+    "size": "XL",
+    "fuel": "diesel",
+    "doors": 5,
+    "transmission": "manual"
+}
+
+
+POST http://localhost:8000/cars/8/trips
+
+{
+    "start": 0,
+    "end": 15,
+    "description": "Grocery"
+}
